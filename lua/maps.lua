@@ -42,14 +42,23 @@ keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>')
 keymap.set('n', '<Space>e', '<cmd>Neotree toggle<cr>')
 
 -- Telescope
--- keymap.set('n', '<Space>fw', function() require("telescope.builtin").live_grep() end)
 keymap.set('n', '<Space>fw', function()
       require("telescope.builtin").live_grep {
         additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
       }
     end)
-
-
+keymap.set('n', '<Space>fW', function()
+      require("telescope.builtin").live_grep {
+        additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
+      }
+    end)
+keymap.set('n', '<Space>ff', function() require("telescope.builtin").find_files() end)
+keymap.set('n', '<Space>fF', function() require("telescope.builtin").find_files { hidden = true, no_ignore = true } end)
+keymap.set('n', '<Space>fc', function() require("telescope.builtin").grep_string() end)
+keymap.set('n', '<Space>fb', function() require("telescope.builtin").buffers() end)
+keymap.set('n', '<Space>gt', function() require("telescope.builtin").git_status() end)
+keymap.set('n', '<Space>gb', function() require("telescope.builtin").git_branches() end)
+keymap.set('n', '<Space>gc', function() require("telescope.builtin").git_commits() end)
 
 -- TODO: Update resize commands
 -- Resize window

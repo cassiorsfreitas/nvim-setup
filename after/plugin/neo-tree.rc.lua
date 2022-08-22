@@ -3,7 +3,7 @@ if not status_ok then return end
 neotree.setup({
   close_if_last_window = true,
   popup_border_style = "rounded",
-  enable_diagnostics = false,
+  enable_diagnostics = true,
   default_component_configs = {
     indent = {
       padding = 0,
@@ -43,7 +43,6 @@ neotree.setup({
       hide_by_name = {
         ".DS_Store",
         "thumbs.db",
-        "node_modules",
         "__pycache__",
       },
     },

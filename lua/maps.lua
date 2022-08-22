@@ -41,6 +41,16 @@ keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>')
 -- Neo Tree
 keymap.set('n', '<Space>e', '<cmd>Neotree toggle<cr>')
 
+-- Telescope
+-- keymap.set('n', '<Space>fw', function() require("telescope.builtin").live_grep() end)
+keymap.set('n', '<Space>fw', function()
+      require("telescope.builtin").live_grep {
+        additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
+      }
+    end)
+
+
+
 -- TODO: Update resize commands
 -- Resize window
 -- keymap.set('n', '<C-Up>', ':resize -2<CR>')

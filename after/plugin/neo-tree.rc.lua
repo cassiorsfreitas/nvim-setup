@@ -44,6 +44,7 @@ neotree.setup({
         ".DS_Store",
         "thumbs.db",
         "__pycache__",
+        ".git",
       },
     },
     follow_current_file = true,

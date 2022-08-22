@@ -1,3 +1,6 @@
+# Packer Compiled Lua
+plugin/packer_compiled.lua
+
 ### macOS ###
 # General
 .DS_Store
@@ -77,3 +80,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+plugin/packer_compiled.lua

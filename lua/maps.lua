@@ -57,7 +57,11 @@ keymap.set('n', '<Space>gb', function() require("telescope.builtin").git_branche
 keymap.set('n', '<Space>gc', function() require("telescope.builtin").git_commits() end)
 
 -- GitSigns
-keymap.set('n', '<Space>gd', function() require("gitsigns").diffthis() end)
+-- keymap.set('n', '<Space>gd', function() require("gitsigns").diffthis() end)
+
+-- Diffview
+keymap.set('n', '<Space>gd', '<cmd>DiffviewOpen<cr>')
+keymap.set('n', '<Space>gq', '<cmd>DiffviewClose<cr>')
 
 -- TODO: Update resize commands
 -- Resize window

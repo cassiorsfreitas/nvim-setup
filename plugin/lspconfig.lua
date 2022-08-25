@@ -23,6 +23,8 @@ local on_attach = function(client, bufnr)
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  --buf_set_keymap('n', '<Space>ll', function() vim.lsp.buf.code_action() end)
+  --buf_set_keymap('n', '<Space>lf', function() vim.lsp.buf.formatting_sync() end)
 end
 
 protocol.CompletionItemKind = {

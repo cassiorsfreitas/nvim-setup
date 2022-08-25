@@ -3,11 +3,17 @@ if (not status) then return end
 
 bufferline.setup({
   options = {
-    separator_style = 'slant',
+    offsets = {
+      { filetype = "NvimTree", text = "", padding = 1 },
+      { filetype = "neo-tree", text = "", padding = 1 },
+      { filetype = "Outline", text = "", padding = 1 },
+    },
+    separator_style = 'thin',
     always_show_bufferline = true,
     show_buffer_close_icons = false,
     show_close_icon = false,
-    color_icons = true
+    color_icons = true,
+    modified_icon = "",
   },
   highlights = {
     buffer_selected = {
@@ -17,4 +23,3 @@ bufferline.setup({
     },
   },
 })
-

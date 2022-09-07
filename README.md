@@ -37,7 +37,7 @@ Requires [Neovim](https://neovim.io/) (>= 0.7)
 ## How to use
 
 ```
-$ git clone https://github.com/mnabila/nvimrc ~/.config/nvim
+$ git clone https://github.com/cassiorsfreitas/nvim-setup ~/.config/nvim
 $ nvim +PackerInstall
 ```
 
